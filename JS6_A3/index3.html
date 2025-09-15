@@ -1,0 +1,84 @@
+<!-- HTML5 문서 유형임을 선언합니다. -->
+<!DOCTYPE html>
+<!-- <html>은 HTML 문서의 최상위 요소이며, 주 사용 언어가 영어(en)임을 명시합니다. -->
+<html lang="en">
+  <head>
+    <!-- 문자 인코딩을 UTF-8로 설정하여 다국어 문자가 깨지지 않도록 합니다. -->
+    <meta charset="UTF-8" />
+    <!-- 뷰포트 설정을 통해 다양한 화면 크기에서 페이지가 적절하게 보이도록 합니다. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 브라우저 탭에 표시될 문서의 제목입니다. -->
+    <title>Document</title>
+    <!-- 외부 CSS 파일(style3.css)을 연결하여 페이지의 스타일을 적용합니다. -->
+    <link rel="stylesheet" href="./style3.css" />
+  </head>
+  <body>
+    <!-- <header>는 페이지의 머리말 부분을 나타내는 시맨틱 태그입니다. -->
+    <header>
+      <h1>혜성의 우주 웹사이트</h1>
+      <!-- <nav>는 내비게이션 링크들의 집합을 나타냅니다. -->
+      <nav>
+        <a href="#home">홈</a> | <a href="#about">우주 정보</a>
+        <a href="#contact">연락처</a>
+      </nav>
+    </header>
+
+    <!-- <main>은 페이지의 핵심적인 주요 콘텐츠를 담는 시맨틱 태그입니다. -->
+    <main>
+      <div class="content">
+        <h2>우주의 신비를 탐험하세요</h2>
+        <p>
+          우주에 대한 재미있는 사실들, 최신 우주 뉴스, 별자리 정보를 이곳에서
+          만나 보세요.
+        </p>
+        <!-- 'gallery' 클래스를 가진 div로, 이미지들을 그룹화하는 역할을 합니다. -->
+        <div class="gallery">
+          <!-- <figure>는 이미지와 설명을 하나의 단위로 묶는 시맨틱 태그입니다. -->
+          <figure>
+            <img
+              src="https://storage.googleapis.com/codingvalley/src/WPH_A3-2_Venus.webp"
+              alt="금성"
+            />
+            <figcaption>금성</figcaption>
+            <!-- 'distance-meter' 클래스를 가진 div로, 미터기와 라벨을 그룹화합니다. -->
+            <div class="distance-meter">
+              <!-- 'meter-label' 클래스를 가진 span으로, 미터기가 무엇을 나타내는지 설명합니다. -->
+              <span class="meter-label">태양 대비 지름</span>
+              <!-- <meter> 태그는 특정 범위 내의 스칼라 값(게이지)을 시각적으로 표현합니다. -->
+              <!-- value="0.009"는 현재 값을 나타냅니다. (기본 범위는 0~1) -->
+              <!-- 태그 사이의 "0.9%"는 <meter>를 지원하지 않는 브라우저를 위한 대체 텍스트입니다. -->
+              <meter value="0.009">0.9%</meter>
+            </div>
+          </figure>
+          <figure>
+            <img
+              src="https://storage.googleapis.com/codingvalley/src/WPH_A3-2_Jupiter.webp"
+              alt="목성"
+            />
+            <figcaption>목성</figcaption>
+            <div class="distance-meter">
+              <span class="meter-label">태양 대비 지름</span>
+              <meter value="0.103">10.3%</meter>
+            </div>
+          </figure>
+          <figure>
+            <!-- (개선 제안) 이 이미지의 alt 속성값은 "토성"이 더 적절합니다. -->
+            <img
+              src="https://storage.googleapis.com/codingvalley/src/WPH_A3-2_Saturn.webp"
+              alt="토성"
+            />
+            <figcaption>토성</figcaption>
+            <div class="distance-meter">
+              <span class="meter-label">태양 대비 지름</span>
+              <meter value="0.087">8.7%</meter>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </main>
+    <!-- <footer>는 페이지의 꼬리말 부분을 나타냅니다. -->
+    <footer>
+      <p>저작권 2024 혜성의 우주 웹사이트. 모든 권리 보유.</p>
+    </footer>
+  </body>
+</html>

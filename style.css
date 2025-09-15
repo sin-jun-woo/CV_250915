@@ -1,0 +1,72 @@
+/* 'village-row' 클래스를 가진 요소(마을 전체 배경)에 적용될 스타일입니다. */
+.village-row {
+  /* 자식 요소(집들)를 가로로 나란히 배치하기 위해 Flexbox 레이아웃을 사용합니다. */
+  display: flex;
+  /* 배경색을 하늘색 계열(#e0f7fa)로 지정합니다. */
+  background-color: #e0f7fa;
+  /* padding과 border를 요소의 전체 너비와 높이에 포함시켜 계산을 용이하게 합니다. */
+  box-sizing: border-box;
+  /* 전체 배경의 높이를 500px로 고정합니다. */
+  height: 500px;
+  /* 내부 콘텐츠(집들)와 테두리 사이에 20px의 안쪽 여백을 줍니다. */
+  padding: 20px;
+  /* Flexbox의 주축(가로)을 기준으로 자식 요소들을 가운데 정렬합니다. */
+  justify-content: center;
+  /* Flexbox의 교차축(세로)을 기준으로 자식 요소들을 가운데 정렬합니다. */
+  align-items: center;
+}
+
+/* 'house' 클래스를 가진 요소(집의 몸체)에 적용될 스타일입니다. */
+.house {
+  /* 집의 너비를 40px로 설정합니다. */
+  width: 40px;
+  /* 집의 높이를 40px로 설정합니다. */
+  height: 40px;
+  /* 다른 집과의 간격을 좌우상하 10px씩 줍니다. */
+  margin: 10px;
+  /* 집의 벽 색상을 분홍색 계열(#f8bbd0)로 지정합니다. */
+  background-color: #f8bbd0;
+  /* 자식 요소인 지붕(.roof)과 문(.door)을 절대 위치로 배치하기 위한 기준점으로 설정합니다. */
+  position: relative;
+  /* 아래쪽 좌우 모서리만 3px만큼 둥글게 만듭니다. */
+  border-radius: 0 0 3px 3px;
+  /* 집에 입체감을 주기 위해 그림자 효과를 추가합니다. */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 'roof' 클래스를 가진 요소(지붕)에 적용될 스타일입니다. */
+.roof {
+  /* CSS 테두리 트릭으로 삼각형을 만들기 위해 너비와 높이를 0으로 설정합니다. */
+  width: 0;
+  height: 0;
+  /* 삼각형의 왼쪽 빗변을 만듭니다. 'transparent'는 투명하게 처리됨을 의미합니다. */
+  border-left: 20px solid transparent;
+  /* 삼각형의 오른쪽 빗변을 만듭니다. */
+  border-right: 20px solid transparent;
+  /* 삼각형의 밑변을 만들고 색상(#ad1457)을 지정합니다. 이 부분이 실제 보이는 지붕이 됩니다. */
+  border-bottom: 20px solid #ad1457;
+  /* 부모 요소인 .house를 기준으로 위치를 잡습니다. */
+  position: absolute;
+  /* 집 몸체 위로 20px(지붕 높이만큼) 이동시켜 꼭대기에 위치시킵니다. */
+  top: -20px;
+  /* 집 몸체의 왼쪽 끝에 맞춥니다. */
+  left: 0;
+}
+
+/* 'door' 클래스를 가진 요소(문)에 적용될 스타일입니다. */
+.door {
+  /* 문의 너비를 15px로 설정합니다. */
+  width: 15px;
+  /* 문의 높이를 20px로 설정합니다. */
+  height: 20px;
+  /* 문의 색상을 보라색 계열(#6a1b9a)로 지정합니다. */
+  background-color: #6a1b9a;
+  /* 부모 요소인 .house를 기준으로 위치를 잡습니다. */
+  position: absolute;
+  /* 집 몸체의 바닥에서 2px 위에 위치시킵니다. */
+  bottom: 2px;
+  /* 집 몸체의 왼쪽에서 13px 떨어진 곳에 위치시켜 중앙에 가깝게 배치합니다. */
+  left: 13px;
+  /* 문의 아래쪽 좌우 모서리만 3px만큼 둥글게 만듭니다. */
+  border-radius: 0 0 3px 3px;
+}

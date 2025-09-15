@@ -1,0 +1,76 @@
+/* 'garden' 클래스를 가진 요소(정원 배경)에 적용될 스타일입니다. */
+.garden {
+  /* 자식 요소(집)를 Flexbox 레이아웃으로 배치합니다. */
+  display: flex;
+  /* 자식 요소를 가로축(주축)의 중앙에 정렬합니다. */
+  justify-content: center;
+  /* 자식 요소를 세로축(교차축)의 중앙에 정렬합니다. */
+  align-items: center;
+  /* 배경 이미지를 URL로부터 불러옵니다. */
+  background-image: url("https://storage.googleapis.com/codingvalley/src/WPH_A4-3_bg.webp");
+  /* 배경 이미지가 요소 전체를 덮도록 크기를 조절합니다. */
+  background-size: cover;
+  /* 내부 콘텐츠와 테두리 사이에 20px의 안쪽 여백을 줍니다. */
+  padding: 20px;
+  /* 정원의 높이를 300px로 설정합니다. */
+  height: 300px;
+  /* 정원의 너비를 300px로 설정합니다. */
+  width: 300px;
+  /* 모서리를 15px만큼 둥글게 만듭니다. */
+  border-radius: 15px;
+  /* 요소에 입체감을 주기 위해 그림자 효과를 추가합니다. */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 'house' 클래스를 가진 요소(집의 몸체)에 적용될 스타일입니다. */
+.house {
+  /* 집의 너비를 100px로 설정합니다. */
+  width: 100px;
+  /* 집의 높이를 100px로 설정합니다. */
+  height: 100px;
+  /* 집의 벽 색상을 분홍색 계열(#f8bbd0)로 지정합니다. */
+  background-color: #f8bbd0;
+  /* 자식 요소인 지붕(.roof)과 문(.door)을 절대 위치로 배치하기 위한 기준점으로 설정합니다. */
+  position: relative;
+  /* 아래쪽 좌우 모서리만 10px만큼 둥글게 만듭니다. */
+  border-radius: 0 0 10px 10px;
+  /* 집에 입체감을 주기 위해 그림자 효과를 추가합니다. */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 'roof' 클래스를 가진 요소(지붕)에 적용될 스타일입니다. */
+.roof {
+  /* CSS 테두리 트릭으로 삼각형을 만들기 위해 너비와 높이를 0으로 설정합니다. */
+  width: 0;
+  height: 0;
+  /* 삼각형의 왼쪽 빗변을 투명하게 만듭니다. 너비는 50px입니다. */
+  border-left: 50px solid transparent;
+  /* 삼각형의 오른쪽 빗변을 투명하게 만듭니다. 너비는 50px입니다. */
+  border-right: 50px solid transparent;
+  /* 삼각형의 밑변을 만들고 색상(#ad1457)을 지정합니다. 이 부분이 실제 보이는 지붕이 됩니다. 높이는 50px입니다. */
+  border-bottom: 50px solid #ad1457;
+  /* 부모 요소인 .house를 기준으로 위치를 잡습니다. */
+  position: absolute;
+  /* 집 몸체 위로 50px(지붕 높이만큼) 이동시켜 꼭대기에 위치시킵니다. */
+  top: -50px;
+  /* 집 몸체의 왼쪽 끝에 맞춥니다. */
+  left: 0;
+}
+
+/* 'door' 클래스를 가진 요소(문)에 적용될 스타일입니다. */
+.door {
+  /* 문의 너비를 30px로 설정합니다. */
+  width: 30px;
+  /* 문의 높이를 50px로 설정합니다. */
+  height: 50px;
+  /* 문의 색상을 보라색 계열(#6a1b9a)로 지정합니다. */
+  background-color: #6a1b9a;
+  /* 부모 요소인 .house를 기준으로 위치를 잡습니다. */
+  position: absolute;
+  /* 집 몸체의 바닥에서 10px 위에 위치시킵니다. */
+  bottom: 10px;
+  /* 집 몸체의 왼쪽에서 35px 떨어진 곳에 위치시켜 중앙에 배치합니다. (100-30)/2 = 35 */
+  left: 35px;
+  /* 문의 아래쪽 좌우 모서리만 5px만큼 둥글게 만듭니다. */
+  border-radius: 0 0 5px 5px;
+}
